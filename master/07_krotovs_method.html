@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Krotov’s Method &mdash; Krotov 1.2.1 documentation</title>
+  <title>Krotov’s Method &mdash; Krotov 1.2.1+dev (cfe6b10) documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
-        <script src="_static/doctr-versions-menu.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/SVG"], "TeX": {"extensions": ["AMSmath.js", "AMSsymbols.js"], "Macros": {"tr": ["{\\operatorname{tr}}", 0], "diag": ["{\\operatorname{diag}}", 0], "abs": ["{\\operatorname{abs}}", 0], "pop": ["{\\operatorname{pop}}", 0], "ee": ["{\\text{e}}", 0], "ii": ["{\\text{i}}", 0], "aux": ["{\\text{aux}}", 0], "opt": ["{\\text{opt}}", 0], "tgt": ["{\\text{tgt}}", 0], "init": ["{\\text{init}}", 0], "lab": ["{\\text{lab}}", 0], "rwa": ["{\\text{rwa}}", 0], "bra": ["{\\langle#1\\vert}", 1], "ket": ["{\\vert#1\\rangle}", 1], "Bra": ["{\\left\\langle#1\\right\\vert}", 1], "Braket": ["{\\left\\langle #1\\vphantom{#2} \\mid #2\\vphantom{#1}\\right\\rangle}", 2], "ketbra": ["{\\vert#1\\rangle\\!\\langle#2\\vert}", 2], "Ket": ["{\\left\\vert#1\\right\\rangle}", 1], "mat": ["{\\mathbf{#1}}", 1], "op": ["{\\hat{#1}}", 1], "Op": ["{\\hat{#1}}", 1], "dd": ["{\\,\\text{d}}", 0], "daggered": ["{^{\\dagger}}", 0], "transposed": ["{^{\\text{T}}}", 0], "Liouville": ["{\\mathcal{L}}", 0], "DynMap": ["{\\mathcal{E}}", 0], "identity": ["{\\mathbf{1}}", 0], "Norm": ["{\\left\\lVert#1\\right\\rVert}", 1], "norm": ["{\\lVert#1\\rVert}", 1], "Abs": ["{\\left\\vert#1\\right\\vert}", 1], "avg": ["{\\langle#1\\rangle}", 1], "Avg": ["{\\left\\langle#1\\right\\rangle}", 1], "AbsSq": ["{\\left\\vert#1\\right\\vert^2}", 1], "Re": ["{\\operatorname{Re}}", 0], "Im": ["{\\operatorname{Im}}", 0], "Real": ["{\\mathbb{R}}", 0], "Complex": ["{\\mathbb{C}}", 0], "Integer": ["{\\mathbb{N}}", 0]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                1.2.1
+                1.2.1+dev
               </div>
             
           
@@ -251,11 +251,11 @@ The most direct example of a control problem is a state-to-state transition.
 The objective is for a known quantum state <span class="math notranslate nohighlight">\(\ket{\phi}\)</span> at time
 zero to evolve to a specific target state <span class="math notranslate nohighlight">\(\ket{\phi^\tgt}\)</span> at
 final time <span class="math notranslate nohighlight">\(T\)</span>, controlling, e.g. a chemical
-reaction <span id="id1">[<a class="reference internal" href="99_bibliography.html#id68"><span>37</span></a>]</span>.
+reaction <span id="id1">[<a class="reference internal" href="99_bibliography.html#id68">37</a>]</span>.
 Another example is the
 realization of quantum gates, the building blocks of a quantum computer.
 In this case, the states forming a computational basis must transform
-according to a unitary transformation <span id="id2">[<a class="reference internal" href="99_bibliography.html#id31"><span>2</span></a>]</span>,
+according to a unitary transformation <span id="id2">[<a class="reference internal" href="99_bibliography.html#id31">2</a>]</span>,
 see <a class="reference internal" href="10_howto.html#howtogateoptimization"><span class="std std-ref">How to optimize towards a quantum gate</span></a>. Thus, the
 control problem involves not just the time evolution of a single state,
 but a set of states <span class="math notranslate nohighlight">\(\{\ket{\phi_k(t)}\}\)</span>. Generalizing even
@@ -271,12 +271,12 @@ involved in the dynamics, these may correspond e.g., to different color
 lasers used in the excitation of a Rydberg atom, or different
 polarization components of an electric field.</p>
 <p>The quantum control methods build on a rich field of classical control
-theory <span id="id3">[<a class="reference internal" href="99_bibliography.html#id66"><span>38</span></a>,<a class="reference internal" href="99_bibliography.html#id67"><span>39</span></a>]</span>. This includes
-Krotov’s method <span id="id4">[<a class="reference internal" href="99_bibliography.html#id105"><span>40</span></a>,<a class="reference internal" href="99_bibliography.html#id106"><span>41</span></a>,<a class="reference internal" href="99_bibliography.html#id5"><span>42</span></a>,<a class="reference internal" href="99_bibliography.html#id6"><span>43</span></a>]</span>,
+theory <span id="id3">[<a class="reference internal" href="99_bibliography.html#id66">38</a>, <a class="reference internal" href="99_bibliography.html#id67">39</a>]</span>. This includes
+Krotov’s method <span id="id4">[<a class="reference internal" href="99_bibliography.html#id105">40</a>, <a class="reference internal" href="99_bibliography.html#id106">41</a>, <a class="reference internal" href="99_bibliography.html#id5">42</a>, <a class="reference internal" href="99_bibliography.html#id6">43</a>]</span>,
 which was originally formulated to optimize the soft landing of a
 spacecraft from orbit to the surface of a planet, before being applied
 to quantum mechanical
-problems <span id="id5">[<a class="reference internal" href="99_bibliography.html#id34"><span>5</span></a>,<a class="reference internal" href="99_bibliography.html#id4"><span>44</span></a>,<a class="reference internal" href="99_bibliography.html#id76"><span>45</span></a>,<a class="reference internal" href="99_bibliography.html#id10"><span>46</span></a>,<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span>.
+problems <span id="id5">[<a class="reference internal" href="99_bibliography.html#id34">5</a>, <a class="reference internal" href="99_bibliography.html#id7">22</a>, <a class="reference internal" href="99_bibliography.html#id4">44</a>, <a class="reference internal" href="99_bibliography.html#id76">45</a>, <a class="reference internal" href="99_bibliography.html#id10">46</a>]</span>.
 Fundamentally, they rely on the variational principle, that is, the
 minimization of a functional
 <span class="math notranslate nohighlight">\(J[\{\ket{\phi_k^{(i)}(t)}\}, \{\epsilon_l^{(i)}(t)\}]\)</span> that
@@ -284,7 +284,7 @@ includes any required constraints via Lagrange multipliers. The
 condition for minimizing <span class="math notranslate nohighlight">\(J\)</span> is then
 <span class="math notranslate nohighlight">\(\nabla_{\phi_k, \epsilon_l} J = 0\)</span>. In rare cases, the
 variational calculus can be solved in closed form, based on Pontryagin’s
-maximum principle <span id="id6">[<a class="reference internal" href="99_bibliography.html#id67"><span>39</span></a>]</span>. Numerical methods
+maximum principle <span id="id6">[<a class="reference internal" href="99_bibliography.html#id67">39</a>]</span>. Numerical methods
 are required in any other case. These start from an initial guess
 control (or set of guess controls, if there are multiple controls), and
 calculate an update to these controls that will decrease the value of
@@ -295,7 +295,7 @@ sufficiently small, or convergence is reached.</p>
 <div class="section" id="optimization-functional">
 <h2>Optimization functional<a class="headerlink" href="#optimization-functional" title="Permalink to this headline">¶</a></h2>
 <p>Mathematically, Krotov’s method, when applied to quantum
-systems <span id="id7">[<a class="reference internal" href="99_bibliography.html#id34"><span>5</span></a>,<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span>, minimizes a functional
+systems <span id="id7">[<a class="reference internal" href="99_bibliography.html#id34">5</a>, <a class="reference internal" href="99_bibliography.html#id7">22</a>]</span>, minimizes a functional
 of the most general form</p>
 <div class="math notranslate nohighlight" id="equation-functional">
 <span class="eqno">(1)<a class="headerlink" href="#equation-functional" title="Permalink to this equation">¶</a></span>\[J[\{\ket{\phi_k^{(i)}(t)}\}, \{\epsilon_l^{(i)}(t)\}]
@@ -320,7 +320,7 @@ functional, and we can usually think of <span class="math notranslate nohighligh
 auxiliary functional in the optimization of <span class="math notranslate nohighlight">\(J_T\)</span>.</p></li>
 <li><p>A running cost on the control fields, <span class="math notranslate nohighlight">\(g_a\)</span>. The most commonly
 used expression (and the only one currently supported by the
-<a class="reference internal" href="API/krotov.html#module-krotov" title="krotov"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov</span></code></a> package) is <span id="id8">[<a class="reference internal" href="99_bibliography.html#id9"><span>47</span></a>]</span></p>
+<a class="reference internal" href="API/krotov.html#module-krotov" title="krotov"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov</span></code></a> package) is <span id="id8">[<a class="reference internal" href="99_bibliography.html#id9">47</a>]</span></p>
 <div class="math notranslate nohighlight" id="equation-g-a">
 <span class="eqno">(2)<a class="headerlink" href="#equation-g-a" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{split}
     g_a(\epsilon_l^{(i)}(t))
@@ -343,8 +343,8 @@ iteration <span class="math notranslate nohighlight">\((i)\)</span>.</p>
 </li>
 <li><p>An optional state-dependent running cost, <span class="math notranslate nohighlight">\(g_b\)</span>. This may be
 used to encode time-dependent control
-targets <span id="id9">[<a class="reference internal" href="99_bibliography.html#id102"><span>48</span></a>,<a class="reference internal" href="99_bibliography.html#id103"><span>49</span></a>]</span>, or to penalize population in a
-subspace <span id="id10">[<a class="reference internal" href="99_bibliography.html#id8"><span>50</span></a>]</span>. The presence of a
+targets <span id="id9">[<a class="reference internal" href="99_bibliography.html#id102">48</a>, <a class="reference internal" href="99_bibliography.html#id103">49</a>]</span>, or to penalize population in a
+subspace <span id="id10">[<a class="reference internal" href="99_bibliography.html#id8">50</a>]</span>. The presence of a
 state-dependent constraint in the functional entails an inhomogeneous
 term in the backward propagation in the calculation of the control
 updates in each iteration of Krotov’s method, see Eq. <a class="reference internal" href="#equation-bw-eqm">(14)</a>, and is
@@ -371,7 +371,7 @@ final-time states under the given control. Thus,</p>
 overlaps, taking into account that any optimization functional <span class="math notranslate nohighlight">\(J_T\)</span> must
 be real. They differ by the way they treat the phases <span class="math notranslate nohighlight">\(\varphi_k\)</span> in the
 physical optimization goal <span class="math notranslate nohighlight">\(\ket{\phi_k(T)} \overset{!}{=}
-e^{i\varphi_k}\ket{\phi_k^{\tgt}}\)</span> <span id="id11">[<a class="reference internal" href="99_bibliography.html#id9"><span>47</span></a>]</span>:</p>
+e^{i\varphi_k}\ket{\phi_k^{\tgt}}\)</span> <span id="id11">[<a class="reference internal" href="99_bibliography.html#id9">47</a>]</span>:</p>
 <ul>
 <li><p>Optimize for simultaneous state-to-state transitions, with completely
 arbitrary phases <span class="math notranslate nohighlight">\(\varphi_k\)</span>,</p>
@@ -466,7 +466,7 @@ These details are not necessary to <em>use</em> the <a class="reference internal
 calculating the updated fields <span class="math notranslate nohighlight">\(\{\epsilon_l^{(i)}(t)\}\)</span> such that
 <span class="math notranslate nohighlight">\(J(\{\ket{\phi_k^{(i)}(t)}\}, \{\epsilon_l^{(i)}(t)\}) \leq
 J(\{\ket{\phi_k^{(i-1)}(t)}\}, \{\epsilon_l^{(i-1)}(t)\})\)</span> is true <em>by
-construction</em> <span id="id12">[<a class="reference internal" href="99_bibliography.html#id5"><span>42</span></a>,<a class="reference internal" href="99_bibliography.html#id6"><span>43</span></a>,<a class="reference internal" href="99_bibliography.html#id9"><span>47</span></a>,<a class="reference internal" href="99_bibliography.html#id10"><span>46</span></a>,<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span>.
+construction</em> <span id="id12">[<a class="reference internal" href="99_bibliography.html#id7">22</a>, <a class="reference internal" href="99_bibliography.html#id5">42</a>, <a class="reference internal" href="99_bibliography.html#id6">43</a>, <a class="reference internal" href="99_bibliography.html#id10">46</a>, <a class="reference internal" href="99_bibliography.html#id9">47</a>]</span>.
 For a general functional of the form in
 Eq. <a class="reference internal" href="#equation-functional">(1)</a>, with a convex final-time
 functional <span class="math notranslate nohighlight">\(J_T\)</span>, the condition for monotonic convergence is</p>
@@ -478,7 +478,7 @@ functional <span class="math notranslate nohighlight">\(J_T\)</span>, the condit
       (i)} \Bigg)
       \Bigg\vert \phi_k^{(i)}(t) \Bigg\rangle
     \right]\,,\]</div>
-<p>see Ref. <span id="id13">[<a class="reference internal" href="99_bibliography.html#id9"><span>47</span></a>]</span>.
+<p>see Ref. <span id="id13">[<a class="reference internal" href="99_bibliography.html#id9">47</a>]</span>.
 The notation for the derivative on the right hand side being evaluated
 at <span class="math notranslate nohighlight">\({(i)}\)</span> should be understood to apply when the control
 Hamiltonian is not linear so that
@@ -490,7 +490,7 @@ multiple controls, Eq. <a class="reference internal" href="#equation-krotov-fir
 holds for every control field <span class="math notranslate nohighlight">\(\epsilon_l(t)\)</span> independently.</p>
 <p>For <span class="math notranslate nohighlight">\(g_a\)</span> as in Eq. <a class="reference internal" href="#equation-g-a">(2)</a>, this results in an
 <em>update</em>
-equation <span id="id14">[<a class="reference internal" href="99_bibliography.html#id34"><span>5</span></a>,<a class="reference internal" href="99_bibliography.html#id9"><span>47</span></a>,<a class="reference internal" href="99_bibliography.html#id10"><span>46</span></a>]</span>,</p>
+equation <span id="id14">[<a class="reference internal" href="99_bibliography.html#id34">5</a>, <a class="reference internal" href="99_bibliography.html#id10">46</a>, <a class="reference internal" href="99_bibliography.html#id9">47</a>]</span>,</p>
 <div class="math notranslate nohighlight" id="equation-krotov-first-order-update">
 <span class="eqno">(12)<a class="headerlink" href="#equation-krotov-first-order-update" title="Permalink to this equation">¶</a></span>\[\Delta\epsilon^{(i)}_l(t)
   = \frac{S_l(t)}{\lambda_{a,l}} \Im \left[\,
@@ -547,7 +547,7 @@ depend on the states <span class="math notranslate nohighlight">\(\ket{\phi_k(t)
 (<span class="math notranslate nohighlight">\(g_b\equiv 0\)</span>). When any of these conditions are not fulfilled,
 it is still possible to derive an optimization algorithm with monotonic
 convergence via a “second order” term in
-Eqs. <a class="reference internal" href="#equation-krotov-first-order-proto-update">(11)</a>, <a class="reference internal" href="#equation-krotov-first-order-update">(12)</a> <span id="id15">[<a class="reference internal" href="99_bibliography.html#id6"><span>43</span></a>,<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span>,</p>
+Eqs. <a class="reference internal" href="#equation-krotov-first-order-proto-update">(11)</a>, <a class="reference internal" href="#equation-krotov-first-order-update">(12)</a> <span id="id15">[<a class="reference internal" href="99_bibliography.html#id7">22</a>, <a class="reference internal" href="99_bibliography.html#id6">43</a>]</span>,</p>
 <p>The full update equation then reads</p>
 <div class="math notranslate nohighlight" id="equation-krotov-second-order-update">
 <span class="eqno">(16)<a class="headerlink" href="#equation-krotov-second-order-update" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{split}
@@ -569,19 +569,19 @@ Eqs. <a class="reference internal" href="#equation-krotov-first-order-proto-upd
 <div class="math notranslate nohighlight">
 \[\ket{\Delta \phi_k^{(i)}(t)}
   \equiv \ket{\phi_k^{(i)}(t)} - \ket{\phi_k^{(i-1)}(t)}\,,\]</div>
-<p>see Ref. <span id="id16">[<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span> for the full construction of
+<p>see Ref. <span id="id16">[<a class="reference internal" href="99_bibliography.html#id7">22</a>]</span> for the full construction of
 the second-order condition.
 In Eq. <a class="reference internal" href="#equation-krotov-second-order-update">(16)</a>,
 <span class="math notranslate nohighlight">\(\sigma(t)\)</span> is a scalar function that must be properly chosen to
 ensure monotonic convergence.</p>
-<p>In Refs. <span id="id17">[<a class="reference internal" href="99_bibliography.html#id16"><span>28</span></a>,<a class="reference internal" href="99_bibliography.html#id17"><span>29</span></a>]</span>, a non-convex
+<p>In Refs. <span id="id17">[<a class="reference internal" href="99_bibliography.html#id16">28</a>, <a class="reference internal" href="99_bibliography.html#id17">29</a>]</span>, a non-convex
 final-time functional for the optimization towards an arbitrary perfect
 entangler is considered. For this specific example, a suitable choice is</p>
 <div class="math notranslate nohighlight">
 \[\sigma(t) \equiv -\max\left(\varepsilon_A,2A+\varepsilon_A\right)\,,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\varepsilon_A\)</span> is a small non-negative number. The optimal
 value for <span class="math notranslate nohighlight">\(A\)</span> in each iteration can be approximated numerically
-as <span id="id18">[<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span></p>
+as <span id="id18">[<a class="reference internal" href="99_bibliography.html#id7">22</a>]</span></p>
 <div class="math notranslate nohighlight">
 \[\label{eq:numericalA}
   A = \frac{
@@ -792,8 +792,8 @@ states is, written in the form <span class="math notranslate nohighlight">\(\mat
 cf. Eq. <a class="reference internal" href="#equation-fw-eqm">(13)</a>. See <a class="reference internal" href="API/krotov.mu.html#module-krotov.mu" title="krotov.mu"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov.mu</span></code></a> for details.</p>
 <p>Note also that the backward propagation Eq. <a class="reference internal" href="#equation-bw-eqm">(14)</a>
 uses the adjoint <span class="math notranslate nohighlight">\(H\)</span>, which is relevant both for a dissipative
-Liouvillian <span id="id19">[<a class="reference internal" href="99_bibliography.html#id75"><span>51</span></a>,<a class="reference internal" href="99_bibliography.html#id74"><span>52</span></a>,<a class="reference internal" href="99_bibliography.html#id19"><span>27</span></a>]</span> and a non-Hermitian
-Hamiltonian <span id="id20">[<a class="reference internal" href="99_bibliography.html#id11"><span>25</span></a>,<a class="reference internal" href="99_bibliography.html#id73"><span>53</span></a>]</span>.</p>
+Liouvillian <span id="id19">[<a class="reference internal" href="99_bibliography.html#id19">27</a>, <a class="reference internal" href="99_bibliography.html#id75">51</a>, <a class="reference internal" href="99_bibliography.html#id74">52</a>]</span> and a non-Hermitian
+Hamiltonian <span id="id20">[<a class="reference internal" href="99_bibliography.html#id11">25</a>, <a class="reference internal" href="99_bibliography.html#id73">53</a>]</span>.</p>
 <p>See the <a class="reference internal" href="notebooks/04_example_dissipative_qubit_reset.html"><span class="std std-ref">Optimization of Dissipative Qubit Reset</span></a> for an example.</p>
 </div>
 </div>
@@ -814,7 +814,7 @@ Hamiltonian <span id="id20">[<a class="reference internal" href="99_bibliograph
     <p>
         &#169; Copyright 2021, Michael Goerz et al..
       <span class="lastupdated">
-        Last updated on Jan 13, 2021.
+        Last updated on May 28, 2021.
       </span>
 
     </p>

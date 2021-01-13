@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>krotov.second_order module &mdash; Krotov 1.2.1 documentation</title>
+  <title>krotov.second_order module &mdash; Krotov 1.2.1+dev (cfe6b10) documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
-        <script src="../_static/doctr-versions-menu.js"></script>
+        <script src="../_static/docs-versions-menu.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/SVG"], "TeX": {"extensions": ["AMSmath.js", "AMSsymbols.js"], "Macros": {"tr": ["{\\operatorname{tr}}", 0], "diag": ["{\\operatorname{diag}}", 0], "abs": ["{\\operatorname{abs}}", 0], "pop": ["{\\operatorname{pop}}", 0], "ee": ["{\\text{e}}", 0], "ii": ["{\\text{i}}", 0], "aux": ["{\\text{aux}}", 0], "opt": ["{\\text{opt}}", 0], "tgt": ["{\\text{tgt}}", 0], "init": ["{\\text{init}}", 0], "lab": ["{\\text{lab}}", 0], "rwa": ["{\\text{rwa}}", 0], "bra": ["{\\langle#1\\vert}", 1], "ket": ["{\\vert#1\\rangle}", 1], "Bra": ["{\\left\\langle#1\\right\\vert}", 1], "Braket": ["{\\left\\langle #1\\vphantom{#2} \\mid #2\\vphantom{#1}\\right\\rangle}", 2], "ketbra": ["{\\vert#1\\rangle\\!\\langle#2\\vert}", 2], "Ket": ["{\\left\\vert#1\\right\\rangle}", 1], "mat": ["{\\mathbf{#1}}", 1], "op": ["{\\hat{#1}}", 1], "Op": ["{\\hat{#1}}", 1], "dd": ["{\\,\\text{d}}", 0], "daggered": ["{^{\\dagger}}", 0], "transposed": ["{^{\\text{T}}}", 0], "Liouville": ["{\\mathcal{L}}", 0], "DynMap": ["{\\mathcal{E}}", 0], "identity": ["{\\mathbf{1}}", 0], "Norm": ["{\\left\\lVert#1\\right\\rVert}", 1], "norm": ["{\\lVert#1\\rVert}", 1], "Abs": ["{\\left\\vert#1\\right\\vert}", 1], "avg": ["{\\langle#1\\rangle}", 1], "Avg": ["{\\left\\langle#1\\right\\rangle}", 1], "AbsSq": ["{\\left\\vert#1\\right\\vert^2}", 1], "Re": ["{\\operatorname{Re}}", 0], "Im": ["{\\operatorname{Im}}", 0], "Real": ["{\\mathbb{R}}", 0], "Complex": ["{\\mathbb{C}}", 0], "Integer": ["{\\mathbb{N}}", 0]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                1.2.1
+                1.2.1+dev
               </div>
             
           
@@ -270,7 +270,7 @@
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="krotov.second_order.Sigma">
-<em class="property">class </em><code class="sig-prename descclassname">krotov.second_order.</code><code class="sig-name descname">Sigma</code><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.second_order.Sigma" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">krotov.second_order.</span></code><code class="sig-name descname"><span class="pre">Sigma</span></code><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#krotov.second_order.Sigma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/abc.html#abc.ABC" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>Function σ(t) for the second order update equation.</p>
 <p>This is an abstract bases class. For any optimization that requires the
@@ -285,13 +285,13 @@ any of the parameters A, B, C), in <a class="reference internal" href="#krotov.s
 <a class="reference internal" href="krotov.optimize.html#krotov.optimize.optimize_pulses" title="krotov.optimize.optimize_pulses"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize_pulses()</span></code></a>.</p>
 <dl class="py method">
 <dt id="krotov.second_order.Sigma.__call__">
-<em class="property">abstract </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.second_order.Sigma.__call__" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#krotov.second_order.Sigma.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate σ(t)</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="krotov.second_order.Sigma.refresh">
-<em class="property">abstract </em><code class="sig-name descname">refresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">forward_states</span></em>, <em class="sig-param"><span class="n">forward_states0</span></em>, <em class="sig-param"><span class="n">chi_states</span></em>, <em class="sig-param"><span class="n">chi_norms</span></em>, <em class="sig-param"><span class="n">optimized_pulses</span></em>, <em class="sig-param"><span class="n">guess_pulses</span></em>, <em class="sig-param"><span class="n">objectives</span></em>, <em class="sig-param"><span class="n">result</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma.refresh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.second_order.Sigma.refresh" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">refresh</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forward_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_states0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chi_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chi_norms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimized_pulses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess_pulses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectives</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#Sigma.refresh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#krotov.second_order.Sigma.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recalculate the parametric dependencies of σ(t)</p>
 <p>This is called at the end of each control iteration, and may be used to
 estimate the internal parameters in σ(t)</p>
@@ -308,8 +308,8 @@ guess controls of the current iteration.</p></li>
 backward-propagation in the current iteration, as returned by
 the <cite>chi_constructor</cite> argument to <a class="reference internal" href="krotov.optimize.html#krotov.optimize.optimize_pulses" title="krotov.optimize.optimize_pulses"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize_pulses()</span></code></a>.</p></li>
 <li><p><strong>chi_norms</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – The norms of the un-normalized <cite>chi_states</cite>.</p></li>
-<li><p><strong>optimized_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a><em>]</em>) – from the current iteration</p></li>
-<li><p><strong>guess_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a><em>]</em>) – current iteration</p></li>
+<li><p><strong>optimized_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20)"><em>numpy.ndarray</em></a><em>]</em>) – from the current iteration</p></li>
+<li><p><strong>guess_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20)"><em>numpy.ndarray</em></a><em>]</em>) – current iteration</p></li>
 <li><p><strong>objectives</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference internal" href="krotov.objectives.html#krotov.objectives.Objective" title="krotov.objectives.Objective"><em>Objective</em></a><em>]</em>) – The control objectives</p></li>
 <li><p><strong>result</strong> (<a class="reference internal" href="krotov.result.html#krotov.result.Result" title="krotov.result.Result"><em>Result</em></a>) – The result object, up-to-date for the current
 iteration</p></li>
@@ -322,7 +322,7 @@ iteration</p></li>
 
 <dl class="py function">
 <dt id="krotov.second_order.numerical_estimate_A">
-<code class="sig-prename descclassname">krotov.second_order.</code><code class="sig-name descname">numerical_estimate_A</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">forward_states</span></em>, <em class="sig-param"><span class="n">forward_states0</span></em>, <em class="sig-param"><span class="n">chi_states</span></em>, <em class="sig-param"><span class="n">chi_norms</span></em>, <em class="sig-param"><span class="n">Delta_J_T</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#numerical_estimate_A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.second_order.numerical_estimate_A" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">krotov.second_order.</span></code><code class="sig-name descname"><span class="pre">numerical_estimate_A</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forward_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_states0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chi_states</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chi_norms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Delta_J_T</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/second_order.html#numerical_estimate_A"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#krotov.second_order.numerical_estimate_A" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the second-order parameter <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <p>Calculate the new value of <span class="math notranslate nohighlight">\(A\)</span> according to the equation</p>
 <div class="math notranslate nohighlight">
@@ -377,7 +377,7 @@ improved in the current iteration.</p></li>
     <p>
         &#169; Copyright 2021, Michael Goerz et al..
       <span class="lastupdated">
-        Last updated on Jan 13, 2021.
+        Last updated on May 28, 2021.
       </span>
 
     </p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; Krotov 1.2.1 documentation</title>
+  <title>Introduction &mdash; Krotov 1.2.1+dev (cfe6b10) documentation</title>
   
 
   
@@ -37,10 +37,8 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
-        <script src="_static/doctr-versions-menu.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/SVG"], "TeX": {"extensions": ["AMSmath.js", "AMSsymbols.js"], "Macros": {"tr": ["{\\operatorname{tr}}", 0], "diag": ["{\\operatorname{diag}}", 0], "abs": ["{\\operatorname{abs}}", 0], "pop": ["{\\operatorname{pop}}", 0], "ee": ["{\\text{e}}", 0], "ii": ["{\\text{i}}", 0], "aux": ["{\\text{aux}}", 0], "opt": ["{\\text{opt}}", 0], "tgt": ["{\\text{tgt}}", 0], "init": ["{\\text{init}}", 0], "lab": ["{\\text{lab}}", 0], "rwa": ["{\\text{rwa}}", 0], "bra": ["{\\langle#1\\vert}", 1], "ket": ["{\\vert#1\\rangle}", 1], "Bra": ["{\\left\\langle#1\\right\\vert}", 1], "Braket": ["{\\left\\langle #1\\vphantom{#2} \\mid #2\\vphantom{#1}\\right\\rangle}", 2], "ketbra": ["{\\vert#1\\rangle\\!\\langle#2\\vert}", 2], "Ket": ["{\\left\\vert#1\\right\\rangle}", 1], "mat": ["{\\mathbf{#1}}", 1], "op": ["{\\hat{#1}}", 1], "Op": ["{\\hat{#1}}", 1], "dd": ["{\\,\\text{d}}", 0], "daggered": ["{^{\\dagger}}", 0], "transposed": ["{^{\\text{T}}}", 0], "Liouville": ["{\\mathcal{L}}", 0], "DynMap": ["{\\mathcal{E}}", 0], "identity": ["{\\mathbf{1}}", 0], "Norm": ["{\\left\\lVert#1\\right\\rVert}", 1], "norm": ["{\\lVert#1\\rVert}", 1], "Abs": ["{\\left\\vert#1\\right\\vert}", 1], "avg": ["{\\langle#1\\rangle}", 1], "Avg": ["{\\left\\langle#1\\right\\rangle}", 1], "AbsSq": ["{\\left\\vert#1\\right\\vert^2}", 1], "Re": ["{\\operatorname{Re}}", 0], "Im": ["{\\operatorname{Im}}", 0], "Real": ["{\\mathbb{R}}", 0], "Complex": ["{\\mathbb{C}}", 0], "Integer": ["{\\mathbb{N}}", 0]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -72,7 +70,7 @@
             
             
               <div class="version">
-                1.2.1
+                1.2.1+dev
               </div>
             
           
@@ -212,61 +210,61 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>Quantum information science has changed our perception of quantum
 physics from passive understanding to a source of technological
-advances <span id="id1">[<a class="reference internal" href="99_bibliography.html#id41"><span>1</span></a>]</span>. By way of actively exploiting
+advances <span id="id1">[<a class="reference internal" href="99_bibliography.html#id41">1</a>]</span>. By way of actively exploiting
 the two essential elements of quantum physics, coherence and
 entanglement, technologies such as quantum
-computing <span id="id2">[<a class="reference internal" href="99_bibliography.html#id31"><span>2</span></a>]</span> or quantum
-sensing <span id="id3">[<a class="reference internal" href="99_bibliography.html#id32"><span>3</span></a>]</span> hold the promise for solving
+computing <span id="id2">[<a class="reference internal" href="99_bibliography.html#id31">2</a>]</span> or quantum
+sensing <span id="id3">[<a class="reference internal" href="99_bibliography.html#id32">3</a>]</span> hold the promise for solving
 computationally hard problems or reaching unprecedented sensitivity.
 These technologies rely on the ability to accurately perform quantum
 operations for increasingly complex quantum systems. Quantum optimal
 control allows to address this challenge by providing a set of tools to
 devise and implement shapes of external fields that accomplish a given
-task in the best way possible <span id="id4">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>]</span>.
+task in the best way possible <span id="id4">[<a class="reference internal" href="99_bibliography.html#id28">4</a>]</span>.
 Originally developed in the context of molecular
-physics <span id="id5">[<a class="reference internal" href="99_bibliography.html#id34"><span>5</span></a>,<a class="reference internal" href="99_bibliography.html#id35"><span>6</span></a>]</span> and nuclear magnetic
-resonance <span id="id6">[<a class="reference internal" href="99_bibliography.html#id36"><span>7</span></a>,<a class="reference internal" href="99_bibliography.html#id37"><span>8</span></a>]</span>, quantum optimal
+physics <span id="id5">[<a class="reference internal" href="99_bibliography.html#id34">5</a>, <a class="reference internal" href="99_bibliography.html#id35">6</a>]</span> and nuclear magnetic
+resonance <span id="id6">[<a class="reference internal" href="99_bibliography.html#id36">7</a>, <a class="reference internal" href="99_bibliography.html#id37">8</a>]</span>, quantum optimal
 control theory has been adapted to the specific needs of quantum
 information science in recent
-years <span id="id7">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>,<a class="reference internal" href="99_bibliography.html#id30"><span>9</span></a>]</span>. Calculation of
+years <span id="id7">[<a class="reference internal" href="99_bibliography.html#id28">4</a>, <a class="reference internal" href="99_bibliography.html#id30">9</a>]</span>. Calculation of
 optimized external field shapes for tasks such as state preparation or
 quantum gate implementation have thus become
-standard <span id="id8">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>]</span>, even for large Hilbert
+standard <span id="id8">[<a class="reference internal" href="99_bibliography.html#id28">4</a>]</span>, even for large Hilbert
 space dimensions as encountered in e.g. Rydberg
-atoms <span id="id9">[<a class="reference internal" href="99_bibliography.html#id40"><span>10</span></a>,<a class="reference internal" href="99_bibliography.html#id39"><span>11</span></a>]</span>. Experimental
+atoms <span id="id9">[<a class="reference internal" href="99_bibliography.html#id40">10</a>, <a class="reference internal" href="99_bibliography.html#id39">11</a>]</span>. Experimental
 implementation of the calculated field shapes, using arbitrary waveform
 generators, has been eased by the latter becoming available
 commercially. Successful demonstration of quantum operations in various
-experiments <span id="id10">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>,<a class="reference internal" href="99_bibliography.html#id44"><span>12</span></a>,<a class="reference internal" href="99_bibliography.html#id45"><span>13</span></a>,<a class="reference internal" href="99_bibliography.html#id46"><span>14</span></a>,<a class="reference internal" href="99_bibliography.html#id43"><span>15</span></a>,<a class="reference internal" href="99_bibliography.html#id47"><span>16</span></a>,<a class="reference internal" href="99_bibliography.html#id42"><span>17</span></a>,<a class="reference internal" href="99_bibliography.html#id48"><span>18</span></a>,<a class="reference internal" href="99_bibliography.html#id119"><span>19</span></a>,<a class="reference internal" href="99_bibliography.html#id49"><span>20</span></a>]</span>
+experiments <span id="id10">[<a class="reference internal" href="99_bibliography.html#id28">4</a>, <a class="reference internal" href="99_bibliography.html#id44">12</a>, <a class="reference internal" href="99_bibliography.html#id45">13</a>, <a class="reference internal" href="99_bibliography.html#id46">14</a>, <a class="reference internal" href="99_bibliography.html#id43">15</a>, <a class="reference internal" href="99_bibliography.html#id47">16</a>, <a class="reference internal" href="99_bibliography.html#id42">17</a>, <a class="reference internal" href="99_bibliography.html#id48">18</a>, <a class="reference internal" href="99_bibliography.html#id119">19</a>, <a class="reference internal" href="99_bibliography.html#id49">20</a>]</span>
 attests to the level of maturity that quantum optimal control in quantum
 technologies has reached.</p>
 <p>In order to calculate optimized external field shapes, two choices need to be
 made – about the optimization functional and about the optimization method.
 The functional consists of the desired figure of merit, such as a gate or state
 preparation error, as well as additional constraints, such as amplitude or
-bandwidth restrictions <span id="id11">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>,<a class="reference internal" href="99_bibliography.html#id30"><span>9</span></a>]</span>.
+bandwidth restrictions <span id="id11">[<a class="reference internal" href="99_bibliography.html#id28">4</a>, <a class="reference internal" href="99_bibliography.html#id30">9</a>]</span>.
 Optimal control methods in general can be classified into gradient-free and
 gradient-based algorithms that either evaluate the optimization functional
-alone or together with its gradient <span id="id12">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>]</span>.
+alone or together with its gradient <span id="id12">[<a class="reference internal" href="99_bibliography.html#id28">4</a>]</span>.
 Gradient-based methods typically converge faster, unless the number of
 optimization parameters can be kept small.
 Most gradient-based methods rely on the iterative solution of a set of coupled
 equations that include forward propagation of initial states, backward
-propagation of adjoint states, and the control update <span id="id13">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>]</span>.
+propagation of adjoint states, and the control update <span id="id13">[<a class="reference internal" href="99_bibliography.html#id28">4</a>]</span>.
 A popular representative of concurrent update methods is GRadient Ascent Pulse
-Engineering (GRAPE) <span id="id14">[<a class="reference internal" href="99_bibliography.html#id12"><span>21</span></a>]</span>.
+Engineering (GRAPE) <span id="id14">[<a class="reference internal" href="99_bibliography.html#id12">21</a>]</span>.
 Krotov’s method, in contrast, requires sequential
-updates <span id="id15">[<a class="reference internal" href="99_bibliography.html#id34"><span>5</span></a>,<a class="reference internal" href="99_bibliography.html#id7"><span>22</span></a>]</span>.
+updates <span id="id15">[<a class="reference internal" href="99_bibliography.html#id34">5</a>, <a class="reference internal" href="99_bibliography.html#id7">22</a>]</span>.
 This comes with the advantage of guaranteed monotonic convergence and
 obviates the need for a line search in the direction of the
-gradient <span id="id16">[<a class="reference internal" href="99_bibliography.html#id79"><span>23</span></a>]</span>.</p>
+gradient <span id="id16">[<a class="reference internal" href="99_bibliography.html#id79">23</a>]</span>.</p>
 <p>The choice of Python as an implementation language is due to Python’s
 easy-to-learn syntax, expressiveness, and immense popularity in the
 scientific community. Moreover, the <a class="reference external" href="http://qutip.org">QuTiP library</a> exists,
 providing a general purpose tool to numerically describe quantum systems
 and their dynamics. QuTiP already includes basic versions of other
 popular quantum control algorithms such as GRAPE and the gradient-free
-CRAB <span id="id17">[<a class="reference internal" href="99_bibliography.html#id51"><span>24</span></a>]</span>. The <a class="reference external" href="https://jupyter.org">Jupyter notebook</a> framework is available to provide an ideal
+CRAB <span id="id17">[<a class="reference internal" href="99_bibliography.html#id51">24</a>]</span>. The <a class="reference external" href="https://jupyter.org">Jupyter notebook</a> framework is available to provide an ideal
 platform for the interactive exploration of the <a class="reference internal" href="API/krotov.html#module-krotov" title="krotov"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov</span></code></a> package’s
 capabilities, and to facilitate reproducible research workflows.</p>
 <p>The <a class="reference internal" href="API/krotov.html#module-krotov" title="krotov"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov</span></code></a> package targets both students wishing to
@@ -276,24 +274,24 @@ enable users of
 our package to explore the formulation of typical control problems, and
 to understand how Krotov’s method can solve them. These examples are
 inspired by recent
-publications <span id="id18">[<a class="reference internal" href="99_bibliography.html#id11"><span>25</span></a>,<a class="reference internal" href="99_bibliography.html#id18"><span>26</span></a>,<a class="reference internal" href="99_bibliography.html#id19"><span>27</span></a>,<a class="reference internal" href="99_bibliography.html#id16"><span>28</span></a>,<a class="reference internal" href="99_bibliography.html#id17"><span>29</span></a>,<a class="reference internal" href="99_bibliography.html#id61"><span>30</span></a>]</span>,
+publications <span id="id18">[<a class="reference internal" href="99_bibliography.html#id11">25</a>, <a class="reference internal" href="99_bibliography.html#id18">26</a>, <a class="reference internal" href="99_bibliography.html#id19">27</a>, <a class="reference internal" href="99_bibliography.html#id16">28</a>, <a class="reference internal" href="99_bibliography.html#id17">29</a>, <a class="reference internal" href="99_bibliography.html#id61">30</a>]</span>,
 and thus show the use of the method in the purview of current research.
 In particular, the package is not restricted to closed quantum systems,
 but can fully address open system dynamics, and thus aide in the
 development of Noisy Intermediate-Scale Quantum (NISQ)
-technology <span id="id19">[<a class="reference internal" href="99_bibliography.html#id118"><span>31</span></a>]</span>. Optimal control is also
+technology <span id="id19">[<a class="reference internal" href="99_bibliography.html#id118">31</a>]</span>. Optimal control is also
 increasingly important in the design of
-experiments <span id="id20">[<a class="reference internal" href="99_bibliography.html#id28"><span>4</span></a>,<a class="reference internal" href="99_bibliography.html#id44"><span>12</span></a>,<a class="reference internal" href="99_bibliography.html#id45"><span>13</span></a>,<a class="reference internal" href="99_bibliography.html#id46"><span>14</span></a>,<a class="reference internal" href="99_bibliography.html#id43"><span>15</span></a>,<a class="reference internal" href="99_bibliography.html#id47"><span>16</span></a>,<a class="reference internal" href="99_bibliography.html#id42"><span>17</span></a>,<a class="reference internal" href="99_bibliography.html#id48"><span>18</span></a>,<a class="reference internal" href="99_bibliography.html#id119"><span>19</span></a>,<a class="reference internal" href="99_bibliography.html#id49"><span>20</span></a>]</span>,
+experiments <span id="id20">[<a class="reference internal" href="99_bibliography.html#id28">4</a>, <a class="reference internal" href="99_bibliography.html#id44">12</a>, <a class="reference internal" href="99_bibliography.html#id45">13</a>, <a class="reference internal" href="99_bibliography.html#id46">14</a>, <a class="reference internal" href="99_bibliography.html#id43">15</a>, <a class="reference internal" href="99_bibliography.html#id47">16</a>, <a class="reference internal" href="99_bibliography.html#id42">17</a>, <a class="reference internal" href="99_bibliography.html#id48">18</a>, <a class="reference internal" href="99_bibliography.html#id119">19</a>, <a class="reference internal" href="99_bibliography.html#id49">20</a>]</span>,
 and we hope that the availability of an easy-to-use implementation of
 Krotov’s method will facilitate this further.</p>
 <p>Large Hilbert space
-dimensions <span id="id21">[<a class="reference internal" href="99_bibliography.html#id24"><span>32</span></a>,<a class="reference internal" href="99_bibliography.html#id56"><span>33</span></a>,<a class="reference internal" href="99_bibliography.html#id40"><span>10</span></a>,<a class="reference internal" href="99_bibliography.html#id39"><span>11</span></a>]</span>
-and open quantum systems <span id="id22">[<a class="reference internal" href="99_bibliography.html#id19"><span>27</span></a>]</span> in particular
+dimensions <span id="id21">[<a class="reference internal" href="99_bibliography.html#id40">10</a>, <a class="reference internal" href="99_bibliography.html#id39">11</a>, <a class="reference internal" href="99_bibliography.html#id24">32</a>, <a class="reference internal" href="99_bibliography.html#id56">33</a>]</span>
+and open quantum systems <span id="id22">[<a class="reference internal" href="99_bibliography.html#id19">27</a>]</span> in particular
 require considerable numerical effort to optimize. Compared to the
 Fortran and C/C++ languages traditionally used for scientific computing,
-and more recently Julia <span id="id23">[<a class="reference internal" href="99_bibliography.html#id63"><span>34</span></a>]</span>, pure
+and more recently Julia <span id="id23">[<a class="reference internal" href="99_bibliography.html#id63">34</a>]</span>, pure
 Python code usually performs slower by two to three orders of
-magnitude <span id="id24">[<a class="reference internal" href="99_bibliography.html#id64"><span>35</span></a>,<a class="reference internal" href="99_bibliography.html#id65"><span>36</span></a>]</span>. Thus, for
+magnitude <span id="id24">[<a class="reference internal" href="99_bibliography.html#id64">35</a>, <a class="reference internal" href="99_bibliography.html#id65">36</a>]</span>. Thus, for
 hard optimization problems that require several thousand iterations to
 converge, the Python implementation provided by the <a class="reference internal" href="API/krotov.html#module-krotov" title="krotov"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov</span></code></a> package
 may not be sufficiently fast. In this case, it may be desirable to
@@ -323,7 +321,7 @@ against which to test other implementations.</p>
     <p>
         &#169; Copyright 2021, Michael Goerz et al..
       <span class="lastupdated">
-        Last updated on Jan 13, 2021.
+        Last updated on May 28, 2021.
       </span>
 
     </p>

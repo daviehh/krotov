@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Contributing &mdash; Krotov 1.2.1 documentation</title>
+  <title>Contributing &mdash; Krotov 1.2.1+dev (cfe6b10) documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
-        <script src="_static/doctr-versions-menu.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/SVG"], "TeX": {"extensions": ["AMSmath.js", "AMSsymbols.js"], "Macros": {"tr": ["{\\operatorname{tr}}", 0], "diag": ["{\\operatorname{diag}}", 0], "abs": ["{\\operatorname{abs}}", 0], "pop": ["{\\operatorname{pop}}", 0], "ee": ["{\\text{e}}", 0], "ii": ["{\\text{i}}", 0], "aux": ["{\\text{aux}}", 0], "opt": ["{\\text{opt}}", 0], "tgt": ["{\\text{tgt}}", 0], "init": ["{\\text{init}}", 0], "lab": ["{\\text{lab}}", 0], "rwa": ["{\\text{rwa}}", 0], "bra": ["{\\langle#1\\vert}", 1], "ket": ["{\\vert#1\\rangle}", 1], "Bra": ["{\\left\\langle#1\\right\\vert}", 1], "Braket": ["{\\left\\langle #1\\vphantom{#2} \\mid #2\\vphantom{#1}\\right\\rangle}", 2], "ketbra": ["{\\vert#1\\rangle\\!\\langle#2\\vert}", 2], "Ket": ["{\\left\\vert#1\\right\\rangle}", 1], "mat": ["{\\mathbf{#1}}", 1], "op": ["{\\hat{#1}}", 1], "Op": ["{\\hat{#1}}", 1], "dd": ["{\\,\\text{d}}", 0], "daggered": ["{^{\\dagger}}", 0], "transposed": ["{^{\\text{T}}}", 0], "Liouville": ["{\\mathcal{L}}", 0], "DynMap": ["{\\mathcal{E}}", 0], "identity": ["{\\mathbf{1}}", 0], "Norm": ["{\\left\\lVert#1\\right\\rVert}", 1], "norm": ["{\\lVert#1\\rVert}", 1], "Abs": ["{\\left\\vert#1\\right\\vert}", 1], "avg": ["{\\langle#1\\rangle}", 1], "Avg": ["{\\left\\langle#1\\right\\rangle}", 1], "AbsSq": ["{\\left\\vert#1\\right\\vert^2}", 1], "Re": ["{\\operatorname{Re}}", 0], "Im": ["{\\operatorname{Im}}", 0], "Real": ["{\\mathbb{R}}", 0], "Complex": ["{\\mathbb{C}}", 0], "Integer": ["{\\mathbb{N}}", 0]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                1.2.1
+                1.2.1+dev
               </div>
             
           
@@ -322,7 +322,7 @@ configuration of tox environments, you may have to run</p>
 </div>
 <div class="section" id="development-prerequisites">
 <span id="developmentprerequisites"></span><h2>Development Prerequisites<a class="headerlink" href="#development-prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>Contributing to the package’s developments requires that you have Python 3.7
+<p>Contributing to the package’s developments requires that you have Python 3.8
 and <a class="reference external" href="https://tox.readthedocs.io">tox</a> installed. It is strongly recommended that you also have installations
 of all other supported Python versions. The recommended way to install multiple
 versions of Python at the same time is through <a class="reference external" href="https://github.com/pyenv/pyenv">pyenv</a> (or <a class="reference external" href="https://github.com/pyenv-win/pyenv-win">pyenv-win</a> on
@@ -341,7 +341,7 @@ that you may run into occasional binary incompatibilities between conda packages
 <p>If you want to use <cite>conda</cite>, you must use the <code class="docutils literal notranslate"><span class="pre">tox-conda.ini</span></code> configuration
 file. That is, run all <code class="docutils literal notranslate"><span class="pre">make</span></code> comands as e.g.
 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">TOXINI=tox-conda.ini</span> <span class="pre">test</span></code> and <code class="docutils literal notranslate"><span class="pre">tox</span></code> commands as e.g.
-<code class="docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-c</span> <span class="pre">tox-conda.ini</span> <span class="pre">-e</span> <span class="pre">py35-test,py36-test,py37-test</span></code>. Alternatively,
+<code class="docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-c</span> <span class="pre">tox-conda.ini</span> <span class="pre">-e</span> <span class="pre">py38-test</span></code>. Alternatively,
 make <code class="docutils literal notranslate"><span class="pre">tox-conda.ini</span></code> the default by copying it to <code class="docutils literal notranslate"><span class="pre">tox.ini</span></code>.</p>
 </div>
 </div>
@@ -439,14 +439,14 @@ Github will understand.</p>
 </pre></div>
 </div>
 <p>to run the entire test suite, or</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tox -e py35-test,py36-test,py37-test
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tox -e py38-test
 </pre></div>
 </div>
 <p>if <code class="docutils literal notranslate"><span class="pre">make</span></code> is not available.</p>
 <p>The tests are organized in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> subfolder. It includes python scripts
 whose name start with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, which contain functions whose names also start
 with <code class="docutils literal notranslate"><span class="pre">test_</span></code>. Any such functions in any such files are picked up by <a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a>
-for testing. In addition, <a class="reference external" href="https://docs.python.org/3.7/library/doctest.html">doctests</a> from any docstring or any documentation
+for testing. In addition, <a class="reference external" href="https://docs.python.org/3.8/library/doctest.html">doctests</a> from any docstring or any documentation
 file (<code class="docutils literal notranslate"><span class="pre">*.rst</span></code>) are picked up (by the <a class="reference external" href="https://docs.pytest.org/en/latest/doctest.html">pytest doctest plugin</a>). Lastly, all
 <a class="reference internal" href="#contributeexamples"><span class="std std-ref">example notebooks</span></a> are validated as a test, through
 the <a class="reference external" href="https://nbval.readthedocs.io/en/latest/">nbval plugin</a>.</p>
@@ -757,11 +757,11 @@ See the <a class="reference external" href="https://nbval.readthedocs.io/en/late
 <p>To run e.g. only the tests defined in <code class="docutils literal notranslate"><span class="pre">tests/test_krotov.py</span></code>, use any of the following:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make <span class="nb">test</span> <span class="nv">TESTS</span><span class="o">=</span>tests/test_krotov.py
 
-tox -e py37-test -- tests/test_krotov.py
+tox -e py38-test -- tests/test_krotov.py
 
 tox -e run-cmd -- pytest tests/test_krotov.py
 
-.tox/py37/bin/pytest tests/test_krotov.py
+.tox/py38/bin/pytest tests/test_krotov.py
 </pre></div>
 </div>
 <p>See the <a class="reference external" href="https://docs.pytest.org/en/latest/usage.html#specifying-tests-selecting-tests">pytest test selection docs</a> for details.</p>
@@ -848,7 +848,7 @@ messages with time stamps:</p>
     <p>
         &#169; Copyright 2021, Michael Goerz et al..
       <span class="lastupdated">
-        Last updated on Jan 13, 2021.
+        Last updated on May 28, 2021.
       </span>
 
     </p>
